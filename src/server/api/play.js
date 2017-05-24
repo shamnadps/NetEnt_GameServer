@@ -9,15 +9,12 @@ export default function (app) {
     const result = util.getGameResult(array)
 
     // getting a random number for determining bonus.
-    const random = util.getRandomIntInclusive()
-
-    // setting bonus as true if the random number is 2
-    const bonus = random === 2
+    const random = !util.getRandomIntInclusive()
 
     // sending the response as 3 element array
     res.status(200).json([
       {'values': array},
-      {'bonus': bonus},
+      {'bonus': random},
       {'result': result}
     ])
   })
