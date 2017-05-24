@@ -1,6 +1,10 @@
 import * as util from './util'
+import helmet from 'helmet'
 
 export default function (app) {
+  //Securiy
+  app.use(helmet())
+
   app.get('/casino', (req, res) => {
     // get the result array with 3 random integers
     let array = util.populateResultArray()
