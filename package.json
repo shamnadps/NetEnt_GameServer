@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "node bin/dev",
-    "test": "npm build && standard --fix && mocha test/out/**spec.js",
-    "build": "babel src/server --out-dir out/server && babel test/server --out-dir out/server"
+    "start": "npm run-script prepare-source && node bin/dev",
+    "prepare-source": "babel src/server --out-dir out/server",
+    "prepare-test": "babel test/server --out-dir test/out",
+    "test": "npm run-script prepare-test && standard --fix && mocha test/out/**spec.js"
   },
   "author": "shamnad",
   "license": "ISC",
