@@ -1,6 +1,6 @@
 /* global describe, it */
 var expect = require('chai').expect
-var util = require('../../src/server/api/util')
+var util = require('../../out/server/api/util')
 
 describe('getRandomIntInclusive()', function () {
   it('should be an integer in the range 0-5', function () {

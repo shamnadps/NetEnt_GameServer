@@ -4,8 +4,8 @@
   "description": "",
   "scripts": {
     "start": "node bin/dev",
-    "test": "standard --fix && mocha test/**/**spec.js",
-    "build": "babel src/server --out-dir out/server"
+    "test": "npm build && standard --fix && mocha test/out/**spec.js",
+    "build": "babel src/server --out-dir out/server && babel test/server --out-dir out/server"
   },
   "author": "shamnad",
   "license": "ISC",
