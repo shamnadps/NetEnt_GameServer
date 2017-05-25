@@ -14,7 +14,7 @@ By the default the server listens on port 1337.
 
 ### How to use ###
 
-This is very simple chat client using NodeJS
+This is very simple game server using NodeJS
 
 * Only one API is exposed `/casino`
 
