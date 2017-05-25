@@ -6,6 +6,9 @@ export default function (app) {
   app.use(helmet())
 
   app.get('/casino', (req, res) => {
+
+    res.header("Access-Control-Allow-Origin", "*");
+
     // get the result array with 3 random integers
     let array = util.populateResultArray()
 
