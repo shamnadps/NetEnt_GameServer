@@ -21,13 +21,13 @@ export function getGameResult (array) {
   if (array.length === 3) {
     if (array[0] === array[1] &&
         array[0] === array[2]) {
-      return 'Big Win'
+      return 'Big Win!!!'
     } else if (array[0] === array[1] ||
                array[0] === array[2] ||
                array[1] === array[2]) {
-      return 'Small Win'
+      return 'Small Win!'
     } else {
-      return 'No Win'
+      return 'No Win.'
     }
   }
 }
