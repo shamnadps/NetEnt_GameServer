@@ -7,7 +7,6 @@
 * Install [NodeJS](https://nodejs.org)
 * Clone the repository to local.
 * Install libraries: `npm install`
-* Build: `npm build`
 * Run: `npm start`
 
 By the default the server listens on port 1337.
@@ -21,11 +20,11 @@ This is very simple game server using NodeJS
 This returns
 1. Random generated number array of size 3.
 2. A Bonus feature capability determined by flags `true` or `false`.
-3. Result of the game determined as `Big Win` , `Small Win`, `No Win`.
+3. Result of the game determined as `Big Win!!!` , `Small Win!`, `No Win.`.
 
-* `Big Win` - When all the random generated numbers are equal.
-* `Small Win` - When only two of the random generated numbers are equal.
-* `No Win` - When none of the random generated numbers are equal.
+* `Big Win!!!` - When all the random generated numbers are equal.
+* `Small Win!!` - When only two of the random generated numbers are equal.
+* `No Win!` - When none of the random generated numbers are equal.
 
 #### Sample Response ####
 
@@ -47,7 +46,9 @@ Unit Testing is enabled using mocha and chai.
 
 * Run: `npm test`
 
-This executes `mocha test/**/**spec.js` from `package.json` scripts
+This executes `npm run-script prepare-test && standard --fix && mocha test/out/**spec.js` from `package.json` scripts
+* `prepare-test` does the es6 to es5 conversion.
+* `mocha` is used for unit testing.
 
 #### Bug Reporting ####
 
