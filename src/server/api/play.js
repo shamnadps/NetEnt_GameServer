@@ -2,12 +2,13 @@ import * as util from './util'
 import helmet from 'helmet'
 
 export default function (app) {
-  //Securiy
+  // Securiy
   app.use(helmet())
 
+  // api call
   app.get('/casino', (req, res) => {
-
-    res.header("Access-Control-Allow-Origin", "*");
+    // for CORS Support
+    res.header('Access-Control-Allow-Origin', '*')
 
     // get the result array with 3 random integers
     let array = util.populateResultArray()
@@ -21,7 +22,7 @@ export default function (app) {
     // sending the response as 3 element array
     res.status(200).json([
       {'values': array},
-      {'bonus': random},
+      {'bonus': random}, // Bonus feature, this is enabled randomly
       {'result': result}
     ])
   })

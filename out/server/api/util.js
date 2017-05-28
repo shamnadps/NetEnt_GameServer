@@ -20,10 +20,10 @@ function getRandomIntInclusive() {
 }
 
 /**
-Calculating the result of the game
-All Equal - Big Win
-Two Equals - Small Win
-No Equals - No Win
+* Calculating the result of the game
+* All Equal - Big Win
+* Two Equals - Small Win
+* No Equals - No Win
 */
 function getGameResult(array) {
   if (array.length === 3) {
@@ -37,7 +37,9 @@ function getGameResult(array) {
   }
 }
 
-// populating the array with 3 elements
+/* populating the array with 3 elements
+*  for returning 3 random numbers.
+*/
 function populateResultArray() {
   var array = [];
   for (var i = 0; i < 3; i++) {

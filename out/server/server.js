@@ -13,7 +13,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var express = require('express');
 var app = express();
 
-// api to generate random numbers
+// api to generate random numbers, a random bonus feature and game result
 (0, _play2.default)(app);
 
 // listening on port

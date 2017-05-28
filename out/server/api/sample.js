@@ -1,27 +1,27 @@
-'use strict';
+'use strict'
 
-Object.defineProperty(exports, "__esModule", {
+Object.defineProperty(exports, '__esModule', {
   value: true
-});
-exports.distinguishedName = distinguishedName;
-exports.getRandomIntInclusive = getRandomIntInclusive;
-exports.getGameResult = getGameResult;
-exports.populateResultArray = populateResultArray;
+})
+exports.distinguishedName = distinguishedName
+exports.getRandomIntInclusive = getRandomIntInclusive
+exports.getGameResult = getGameResult
+exports.populateResultArray = populateResultArray
 // setting the min and max values for getRandomIntInclusive method
-var MIN = 0;
-var MAX = 5;
+var MIN = 0
+var MAX = 5
 
 // setting the min and max values for getRandomIntInclusive method
-var min = Math.ceil(MIN);
-var max = Math.floor(MAX);
+var min = Math.ceil(MIN)
+var max = Math.floor(MAX)
 
-function distinguishedName() {
-  console.log("foo");
+function distinguishedName () {
+  console.log('foo')
 }
 
 // Random number generator within a range of 0 and 5
-function getRandomIntInclusive() {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+function getRandomIntInclusive () {
+  return Math.floor(Math.random() * (max - min + 1)) + min
 }
 
 /**
@@ -30,23 +30,23 @@ All Equal - Big Win
 Two Equals - Small Win
 No Equals - No Win
 */
-function getGameResult(array) {
+function getGameResult (array) {
   if (array.length === 3) {
     if (array[0] === array[1] && array[0] === array[2]) {
-      return 'Big Win';
+      return 'Big Win'
     } else if (array[0] === array[1] || array[0] === array[2] || array[1] === array[2]) {
-      return 'Small Win';
+      return 'Small Win'
     } else {
-      return 'No Win';
+      return 'No Win'
     }
   }
 }
 
 // populating the array with 3 elements
-function populateResultArray() {
-  var array = [];
+function populateResultArray () {
+  var array = []
   for (var i = 0; i < 3; i++) {
-    array.push(this.getRandomIntInclusive());
+    array.push(this.getRandomIntInclusive())
   }
-  return array;
+  return array
 }

@@ -12,10 +12,10 @@ export function getRandomIntInclusive () {
 }
 
 /**
-Calculating the result of the game
-All Equal - Big Win
-Two Equals - Small Win
-No Equals - No Win
+* Calculating the result of the game
+* All Equal - Big Win
+* Two Equals - Small Win
+* No Equals - No Win
 */
 export function getGameResult (array) {
   if (array.length === 3) {
@@ -32,7 +32,9 @@ export function getGameResult (array) {
   }
 }
 
-// populating the array with 3 elements
+/* populating the array with 3 elements
+*  for returning 3 random numbers.
+*/
 export function populateResultArray () {
   var array = []
   for (let i = 0; i < 3; i++) {

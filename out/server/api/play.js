@@ -1,29 +1,31 @@
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 exports.default = function (app) {
-    //Securiy
-    app.use((0, _helmet2.default)());
+  // Securiy
+  app.use((0, _helmet2.default)());
 
-    app.get('/casino', function (req, res) {
+  // api call
+  app.get('/casino', function (req, res) {
+    // for CORS Support
+    res.header('Access-Control-Allow-Origin', '*');
 
-        res.header("Access-Control-Allow-Origin", "*");
+    // get the result array with 3 random integers
+    var array = util.populateResultArray();
 
-        // get the result array with 3 random integers
-        var array = util.populateResultArray();
+    // get the result of the game.
+    var result = util.getGameResult(array);
 
-        // get the result of the game.
-        var result = util.getGameResult(array);
+    // getting a random number for determining bonus.
+    var random = !util.getRandomIntInclusive();
 
-        // getting a random number for determining bonus.
-        var random = !util.getRandomIntInclusive();
-
-        // sending the response as 3 element array
-        res.status(200).json([{ 'values': array }, { 'bonus': random }, { 'result': result }]);
-    });
+    // sending the response as 3 element array
+    res.status(200).json([{ 'values': array }, { 'bonus': random }, // Bonus feature, this is enabled randomly
+    { 'result': result }]);
+  });
 };
 
 var _util = require('./util');
